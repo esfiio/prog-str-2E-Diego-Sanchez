@@ -1,4 +1,3 @@
-
 # prog-str-2E-Diego-Sanchez-Main
 Repositorio de la clase de programacion estructurada
 
