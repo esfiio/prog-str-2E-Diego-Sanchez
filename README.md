@@ -1,2 +1,5 @@
 # prog-str-2E-Diego-Sanchez
 Repositorio de la clase de programacion estructurada
+
+Autor: Diego Sánchez Carteño
+Grado y grupo: 2E
