@@ -2,4 +2,4 @@
 Repositorio de la clase de programacion estructurada
 
 Autor: Diego Sánchez Carteño
-Grado y grupo: 2E
+Grado y grupo: 2E[]()
