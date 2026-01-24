@@ -27,8 +27,6 @@ public class ActividadSwitchCalculadora {
             default:
                 System.out.println("Opcion invalida");
                 break;
-
-
         }
     }
 
