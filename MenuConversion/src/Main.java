@@ -60,10 +60,11 @@ public class Main {
         System.out.println("El total de conversiones de kilometros a millas fue de: "+contadorMillas);
         System.out.println("El total de conversiones de millas a kilometros fue de: "+contadorKilometros);
 
+        scanner.close();
     }
 
     /**
-     *
+     *Metodo para imprimir el menu
      */
     public static void imprimirMenu() {
         System.out.println("-------Menú-------");
