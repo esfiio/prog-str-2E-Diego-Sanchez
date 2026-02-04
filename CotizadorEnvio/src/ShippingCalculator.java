@@ -7,5 +7,13 @@ public class ShippingCalculator {
     public int precioEstandar = 50;
     public int precioExpress = 90;
     public boolean esZonaRemota;
+    public double subtotal;
+    public double total;
+
+
+    public static double obtenerSubtotal(double pesoKg, int distanciaKm, int tipoServicio, boolean ZonaRemota){
+
+    }
+
 
 }
