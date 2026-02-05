@@ -5,31 +5,40 @@ public class Validador {
     public double PESO_MAXIMO = 50.0;
     public int DISTANCIA_MINIMA = 1;
     public int DISTANCIA_MAXIMA = 2000;
-    public int PRECIO_ESTANDAR = 50;
-    public int PRECIO_EXPRESS = 90;
     public int OPCION_ESTANDAR =1;
     public int OPCION_EXPRESS =2;
 
 
-
+    /**
+     * metodo para obtener el tipo de servicio
+     * @param mensaje mensaje que le aparece al usuario
+     * @param scanner declarado en el main
+     * @return -> int 1 estandar 2. express
+     */
     public int obtenerTipoServicio(String mensaje, Scanner scanner){
         int tipoServicio;
         while(true){
             System.out.println(mensaje);
             if(scanner.hasNextInt()){
                 tipoServicio=scanner.nextInt();
-                if(tipoServicio==OPCION_ESTANDAR){
-                    return PRECIO_ESTANDAR;
-                }else if(tipoServicio==OPCION_EXPRESS){
-                    return PRECIO_EXPRESS;
+                if(tipoServicio==OPCION_ESTANDAR||tipoServicio==OPCION_EXPRESS){
+                    return tipoServicio;
+                }else{
+                    System.out.println("Opcion no valida, por favor elige entre "+OPCION_ESTANDAR+" u"+OPCION_EXPRESS);;
                 }
-            }else {
+            }else{
                 System.out.println("El dato que ingresaste no es valido");
                 scanner.nextLine();
             }
         }
     }
 
+    /**
+     * metodo para validar si el peso es numerico
+     * @param mensaje -> mensaje que le aparece al usuario
+     * @param scanner -> declarado en el main
+     * @return-> double el peso en kg
+     */
     public double obtenerDoubleEnRango(String mensaje, Scanner scanner){
         double valor = 0;
         boolean esValido = false;
@@ -51,6 +60,12 @@ public class Validador {
         return valor;
     }
 
+    /**
+     * metodo para obtener la distancia en km
+     * @param mensaje -> mensaje que le aparece al usuario
+     * @param scanner -> declarado en el main
+     * @return -> int la distancia en km
+     */
     public int obtenerIntEnRango(String mensaje, Scanner scanner){
         int valor = 0;
         boolean esValido = false;
@@ -72,11 +87,17 @@ public class Validador {
         return valor;
     }
 
+    /**
+     * metodo para saber si el usuario vive en una zona remota o no
+     * @param mensaje -> mensaje que le aparece al usuario
+     * @param scanner -> declarado en el main
+     * @return -> boolean true si vive en zona remota, false si no vive en zona remota
+     */
     public boolean leerBooleano(String mensaje, Scanner scanner){
         int esZonaRemota;
         while(true){
             System.out.println("Escribe 'si' si vives en unas zona remota, en caso de que no vivas en una zona remota escribe 'no'");
-            String respuesta = scanner.nextLine();
+            String respuesta = scanner.next();
             String respuestaRevisada = respuesta.trim().toLowerCase();
             if(respuestaRevisada.equals("si")){
                 return true;
