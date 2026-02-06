@@ -37,7 +37,7 @@ public class Validador {
      * metodo para validar si el peso es numerico
      * @param mensaje -> mensaje que le aparece al usuario
      * @param scanner -> declarado en el main
-     * @return-> double el peso en kg
+     * @return -> double el peso en kg
      */
     public double obtenerDoubleEnRango(String mensaje, Scanner scanner){
         double valor = 0;
