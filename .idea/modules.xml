@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ActividadBuenasPracticas/ActividadBuenasPracticas.iml" filepath="$PROJECT_DIR$/ActividadBuenasPracticas/ActividadBuenasPracticas.iml" />
       <module fileurl="file://$PROJECT_DIR$/BuenasPracticas/BuenasPracticas.iml" filepath="$PROJECT_DIR$/BuenasPracticas/BuenasPracticas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CRUDSimple/CRUDSimple.iml" filepath="$PROJECT_DIR$/CRUDSimple/CRUDSimple.iml" />
       <module fileurl="file://$PROJECT_DIR$/ControlDeCalificaciones/ControlDeCalificaciones.iml" filepath="$PROJECT_DIR$/ControlDeCalificaciones/ControlDeCalificaciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/ControlIfElseDiegoSanchez/ControlIfElseDiegoSanchez.iml" filepath="$PROJECT_DIR$/ControlIfElseDiegoSanchez/ControlIfElseDiegoSanchez.iml" />
       <module fileurl="file://$PROJECT_DIR$/ControlSwitchDiegoSanchez/ControlSwitchDiegoSanchez.iml" filepath="$PROJECT_DIR$/ControlSwitchDiegoSanchez/ControlSwitchDiegoSanchez.iml" />
       <module fileurl="file://$PROJECT_DIR$/CotizadorEnvio/CotizadorEnvio.iml" filepath="$PROJECT_DIR$/CotizadorEnvio/CotizadorEnvio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjemploArreglos/EjemploArreglos.iml" filepath="$PROJECT_DIR$/EjemploArreglos/EjemploArreglos.iml" />
       <module fileurl="file://$PROJECT_DIR$/HolaMundo01/HolaMundo01.iml" filepath="$PROJECT_DIR$/HolaMundo01/HolaMundo01.iml" />
       <module fileurl="file://$PROJECT_DIR$/MenuConversion/MenuConversion.iml" filepath="$PROJECT_DIR$/MenuConversion/MenuConversion.iml" />
       <module fileurl="file://$PROJECT_DIR$/MergeWithConflict/MergeWithConflict.iml" filepath="$PROJECT_DIR$/MergeWithConflict/MergeWithConflict.iml" />
