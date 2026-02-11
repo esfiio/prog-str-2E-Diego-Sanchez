@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int opcion;
         Scanner scanner = new Scanner(System.in);
+        int opcion;
         PersonaService servicio = new PersonaService();
         Persona[] personas = new Persona[20];
 
@@ -21,13 +21,21 @@ public class Main {
                 case 1:
                     servicio.alta(personas, scanner);
                     break;
+                case 2:
+                    servicio.buscarPorId(personas, scanner);
+                    break;
+                case 3:
+                    servicio.bajaLogica(personas, scanner);
+                    break;
+                case 4:
+                    servicio.listarActivos(personas, scanner);
+                    break;
+                case 5:
+                    servicio.actualizarNombre(personas, scanner);
+                    break;
                 default:
                     System.out.println("Opcion invalida");
             }
-
-
         }while (opcion!=0);
-
-
     }
 }
