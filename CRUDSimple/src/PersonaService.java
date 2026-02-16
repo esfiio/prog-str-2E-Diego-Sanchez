@@ -46,7 +46,7 @@ public class PersonaService {
         boolean idVerificado= input.verificarId(id, personas);
         if(idVerificado){
             for (Persona persona : personas) {
-                if (persona != null && persona.isActive()) {
+                if (persona != null && persona.isActive()) {//puedo poner todas las valdiaciones dentro de un if para hacerlo mas "sencillo"
                     if (persona.getId() == id) {
                         System.out.println(persona.toString());
                     }
