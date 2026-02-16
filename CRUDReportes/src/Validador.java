@@ -23,7 +23,7 @@ public class Validador {
         }
     }
 
-    public static String teextoNoVacio(Scanner scanner, String mensaje){
+    public static String textoNoVacio(Scanner scanner, String mensaje){
         String texto = "";
         boolean esValido = false;
         while(!esValido){
@@ -52,14 +52,14 @@ public class Validador {
         return true;
     }
 
-    public static int validarPromedio(Scanner scanner, String mensaje){
-       int promedio;
+    public static double validarPromedio(Scanner scanner, String mensaje){
+       double promedio;
         while(true){
             System.out.println(mensaje);
-            if(scanner.hasNextInt()){
-                promedio = scanner.nextInt();
+            if(scanner.hasNextDouble()){
+                promedio = scanner.nextDouble();
                 scanner.nextLine();
-                if(promedio>=0 && promedio<=10){
+                if(promedio>=0.0 && promedio<=10.0){
                     return promedio;
                 }else {
                     System.out.println("El promedio no puede ser menor que 0 o mayor que 10");
@@ -70,5 +70,27 @@ public class Validador {
         }
     }
 
+    public boolean verificarId(int id, Estudiante[] personas){
+        for (Estudiante persona : personas) {
+            if(persona!=null && persona.getId()==id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * metodo para darle un indice a la persona
+     * @param personas -> parametro
+     * @return int -1 si esta en eso, i para asignarlo
+     */
+    public int obtenerIndice(Estudiante[] personas){
+        for (int i = 0; i < personas.length; i++) {
+            if(personas[i]==null){
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }

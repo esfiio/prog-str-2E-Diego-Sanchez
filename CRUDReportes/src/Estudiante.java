@@ -5,7 +5,7 @@ public class Estudiante {
     private double promedio;
     private boolean isActive;
 
-    public Estudiante(){
+    public Estudiante(int id, String nombre){
     }
 
     public Estudiante(int id){
@@ -50,7 +50,6 @@ public class Estudiante {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", promedio=" + promedio +
-                ", isActive=" + isActive +
                 '}';
     }
 }
