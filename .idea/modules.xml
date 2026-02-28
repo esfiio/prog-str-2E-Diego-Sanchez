@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/MergeWithConflict/MergeWithConflict.iml" filepath="$PROJECT_DIR$/MergeWithConflict/MergeWithConflict.iml" />
       <module fileurl="file://$PROJECT_DIR$/MergeWithOutConflict/MergeWithOutConflict.iml" filepath="$PROJECT_DIR$/MergeWithOutConflict/MergeWithOutConflict.iml" />
       <module fileurl="file://$PROJECT_DIR$/NumeroRandom/NumeroRandom.iml" filepath="$PROJECT_DIR$/NumeroRandom/NumeroRandom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoJavaFx/demoJavaFx.iml" filepath="$PROJECT_DIR$/demoJavaFx/demoJavaFx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/prog-str-2E-Diego-Sanchez.iml" filepath="$PROJECT_DIR$/.idea/prog-str-2E-Diego-Sanchez.iml" />
     </modules>
   </component>
