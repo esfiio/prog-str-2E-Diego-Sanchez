@@ -22,7 +22,7 @@
             <TextField fx:id="txtName" promptText="Name" GridPane.columnIndex="1" />
             <TextField fx:id="txtEmail" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Edad" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEdad" promptText="Edad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0">

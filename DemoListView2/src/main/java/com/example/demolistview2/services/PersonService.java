@@ -46,13 +46,18 @@ public class PersonService {
         }
         if( edad == null || edad.isBlank()){
             throw new IllegalArgumentException("La edad es incorrecta");
-        }else{
+        }
+        try{
             edadNumerica = Integer.parseInt(edad.trim());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("La edad debe ser un numero valido");
         }
         if(edadNumerica < 0 || edadNumerica>100){
             throw new IllegalArgumentException("Edad fuera del rango");
         }else if(edadNumerica < 18){
             throw new IllegalArgumentException("Usuario es menor de edad");
         }
+
+
     }
 }

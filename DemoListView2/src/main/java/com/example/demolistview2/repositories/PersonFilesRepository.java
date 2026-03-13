@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PersonFilesRepository {
 
-    private final Path filetPath = Paths.get("DemoListView","data","persons.csv");
+    private final Path filetPath = Paths.get("DemoListView2","data","persons.csv");
 
     private void ensureFile() throws IOException {
         if(Files.notExists(filetPath)){
