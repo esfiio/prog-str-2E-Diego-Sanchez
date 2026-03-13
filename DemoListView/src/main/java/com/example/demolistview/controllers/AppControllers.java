@@ -1,6 +1,6 @@
 package com.example.demolistview.controllers;
 
-import com.example.demolistview.services.PersonService;
+import src.main.java.com.example.demolistview2.services.PersonService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
