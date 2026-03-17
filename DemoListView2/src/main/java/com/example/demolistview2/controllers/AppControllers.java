@@ -32,6 +32,11 @@ public class AppControllers {
     @FXML
     public void initialize(){
         loadFromFile();
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (obs, oldValue, newValue) ->{
+                    loadDataToForm(newValue);
+                }// se llaman funciones lamda
+        );
         listView.setItems(data);
     }
 
@@ -61,7 +66,51 @@ public class AppControllers {
         }
 
     }
+    @FXML
+    public void onUpdate(){
+        String name = txtName.getText();
+        String email = txtEmail.getText();
+        String edad = txtEdad.getText();
+        try {
+            int index = listView.getSelectionModel().getSelectedIndex();
+            service.updatePerson(index ,name,email, edad);
+            loadFromFile();
+            lblMsg.setText("Persona actualizada con exito.");
+            lblMsg.setStyle("-fx-text-fill: green");
+            txtEmail.clear();
+            txtName.clear();
+            txtEdad.clear();
+        }catch (IOException IOException){
+            lblMsg.setStyle("-fx-text-fill: red");
+            lblMsg.setText("Error con el archivo al actualizar.");
+        }catch (IllegalArgumentException argumentException){
+            lblMsg.setStyle("-fx-text-fill: red");
+            lblMsg.setText("Error con los datos al actualizar.");
+        }
+    }
 
+    @FXML
+    public void onDelete(){
+        String name = txtName.getText();
+        String email = txtEmail.getText();
+        String edad = txtEdad.getText();
+        try {
+            int index = listView.getSelectionModel().getSelectedIndex();
+            service.deletePerson(index ,name,email, edad);
+            loadFromFile();
+            lblMsg.setText("Persona actualizada con exito.");
+            lblMsg.setStyle("-fx-text-fill: green");
+            txtEmail.clear();
+            txtName.clear();
+            txtEdad.clear();
+        }catch (IOException IOException){
+            lblMsg.setStyle("-fx-text-fill: red");
+            lblMsg.setText("Error con el archivo al borrar.");
+        }catch (IllegalArgumentException argumentException){
+            lblMsg.setStyle("-fx-text-fill: red");
+            lblMsg.setText("Error con los datos al borrar.");
+        }
+    }
     private void loadFromFile(){
         try{
             List<String> items = service.loadDataForListView();
@@ -72,5 +121,12 @@ public class AppControllers {
             lblMsg.setStyle("-fx-text-fill: red");
             lblMsg.setText("Error al cargar los archivos.");
         }
+    }
+
+    private void loadDataToForm(String data){
+        String[] parts = data.split(" - " );
+        txtName.setText(parts[0]);
+        txtEdad.setText(parts[1]);
+        txtEmail.setText(parts[2]);
     }
 }

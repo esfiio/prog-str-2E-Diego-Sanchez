@@ -24,10 +24,32 @@ public class PersonService {
             String email = parts[1];
             String edad = parts[2];
 
-            result.add("Nombre: "+name + " - " + edad + " - " + email);
+            result.add(name + " - " + edad + " - " + email);
         }
 
         return result;
+    }
+
+    private List<String> getCleanLines() throws IOException {
+        List<String> lines = repo.readAllLines();
+        List<String> cleanLines = new ArrayList<>();
+
+        for(String line : lines){
+            if(line != null && !line.isBlank()){
+                cleanLines.add(line);
+            }
+        }
+        return cleanLines;
+    }
+
+    public void updatePerson(int index, String name, String email, String edad) throws IOException {
+        validate(name, email, edad);
+        if(index < 0){
+            throw new IllegalArgumentException("El indie es invalido");
+        }
+        List<String> data = getCleanLines(); //lo que extragimos del archivo
+        data.set(index, name+","+email+","+edad);
+        repo.saveFile(data);
     }
 
     public void addPerson(String name, String email, String edad) throws IOException {
@@ -35,6 +57,13 @@ public class PersonService {
         repo.appendNewLine(name+","+email+","+edad);
     }
 
+    public void deletePerson(int index, String name, String email, String edad) throws IOException {
+        validate(name, email, edad);
+        List<String> data = getCleanLines();
+        data.remove(index);
+        repo.saveFile(data);
+
+    }
     private void validate(String name, String email, String edad){
         int edadNumerica;
         if (name == null || name.isBlank() || name.length()<3){
@@ -57,7 +86,5 @@ public class PersonService {
         }else if(edadNumerica < 18){
             throw new IllegalArgumentException("Usuario es menor de edad");
         }
-
-
     }
 }
