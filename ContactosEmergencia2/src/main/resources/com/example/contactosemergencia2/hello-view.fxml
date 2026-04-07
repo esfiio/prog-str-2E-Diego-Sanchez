@@ -3,8 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactosemergencia2.HelloController" >
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactosemergencia2.HelloController">
    <children>
       <GridPane prefHeight="150.0" prefWidth="600.0">
         <columnConstraints>
@@ -28,13 +27,14 @@
       </GridPane>
       <HBox prefHeight="45.0" prefWidth="600.0">
          <children>
-            <Button onAction="#onAdd" mnemonicParsing="false" text="Agregar" />
-            <Button mnemonicParsing="false" text="Buscar" />
-            <Button mnemonicParsing="false" text="Actualizar" />
-            <Button mnemonicParsing="false" text="Limpiar" />
-            <Button mnemonicParsing="false" text="Borrar" />
+            <Button mnemonicParsing="false" onAction="#onAdd" text="Agregar" />
+            <Button mnemonicParsing="false" onAction="#onBuscar" text="Buscar" />
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Actualizar" />
+            <Button mnemonicParsing="false" onAction="#onClear" text="Limpiar" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Borrar" />
          </children>
       </HBox>
       <ListView fx:id="contactoListView" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lblMensaje" text="Label" />
    </children>
 </VBox>

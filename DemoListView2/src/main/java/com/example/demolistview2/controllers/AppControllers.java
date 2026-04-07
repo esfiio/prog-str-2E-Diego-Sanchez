@@ -98,7 +98,7 @@ public class AppControllers {
             int index = listView.getSelectionModel().getSelectedIndex();
             service.deletePerson(index ,name,email, edad);
             loadFromFile();
-            lblMsg.setText("Persona actualizada con exito.");
+            lblMsg.setText("Persona borrada con exito.");
             lblMsg.setStyle("-fx-text-fill: green");
             txtEmail.clear();
             txtName.clear();

@@ -37,7 +37,7 @@ public class Contacto {
 
     @Override
     public String toString(){
-        return this.nombre;
+        return this.nombre + "-" + this.telefono + "-" + this.parentesco;
     }
 
 }
